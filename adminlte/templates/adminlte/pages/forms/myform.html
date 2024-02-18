@@ -1,0 +1,405 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="content">
+  <div class="container-fluid">
+    <div class="row justify-content-around">
+      <div class="col-md-12">
+        <div class="card card-secondary">
+          <div class="card-header d-flex justify-content-center">
+            <h3 class="card-title">REGISTRATION FORM FOR CONVOCATION -2023</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>General Form</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">General Form</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <!-- <form method="post">
+    {% csrf_token %}
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="card card-success">
+
+              <div class="card-header">
+                <h3 class="card-title">PERSONAL INFORMATION</h3>
+              </div>
+
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Name: [As per S.S.C Certificate]</label>
+                      {{ form.name }}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Father's Name:</label>
+                      {{ form.father_name }}
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Mother's Name:</label>
+                      {{ form.mother_name }}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Date of Birth:</label>
+                      {{ form.date_of_birth }}
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>Gender:</label>
+                      {{ form.gender }}
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="container mb-3">
+              <div class="row justify-content-center">
+                {% if form.instance.is_submitted %}
+                  <p>Form submitted, cannot be changed.</p>
+                {% else %}
+                  <div class="col-auto">
+                    <button type="submit" name="action" value="draft" class="btn btn-primary mr-2">Draft</button>
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" name="action" value="confirm" class="btn btn-success">Submit</button>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+
+          </form> -->
+
+          <form method="post">
+            {% csrf_token %}
+            <section class="content">
+              <div class="container-fluid">
+                <div class="row">
+        
+                  <!-- left column -->
+                  <!--/.col (left) -->
+                  <!-- right column -->
+                  <div class="col-md-12">
+                    <!-- Form Element sizes -->
+        
+                    <div class="card card-success">
+        
+                      <div class="card-header">
+                        <h3 class="card-title">PERSONAL INFORMATION</h3>
+                      </div>
+        
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Name: [As per S.S.C Certificate]</label>
+                              {{ form.name }}
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label>Father's Name:</label>
+                              <!-- <input type="text" class="form-control" placeholder="Enter ..."> -->
+                              {{ form.father_name }}
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label>Mother's Name:</label>
+                              {{ form.mother_name }}
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label>Date of Birth:</label>
+                              {{ form.date_of_birth }}
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label>Gender:</label>
+                              {{ form.gender }}
+                            </div>
+                          </div>
+                        </div>
+        
+                      </div>
+                    </div>
+        
+                    
+        
+                  </div> <!-- This div closes the div with class="col-md-12" -->
+                </div> <!-- This div closes the div with class="container-fluid" -->
+              </div> <!-- This div closes the div with class="row" -->
+            </section>
+         
+        
+
+            <div class="card card-danger">
+              <div class="card-header">
+                <h3 class="card-title">DEGREE INFORMATION</h3>
+              </div>
+
+              <!-- start Undergraduate -->
+               <div class="card-body">
+                <h5>1) Undergraduate</h5>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Name of Degree:</label>
+                      {{ form.name_of_degree }}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Admission Session: </label>
+                      {{ form.admission_session }}
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Reg/ID No.: </label>
+                      {{ form.reg_id_no }}
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Batch:</label>
+                      {{ form.batch }}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Year of Passing: </label>
+                      {{ form.year_of_passing }}
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Graduating Session: </label>
+                      {{ form.graduating_session }}
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>CGPA: </label>
+                      {{ form.cgpa }}
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            <!-- end undergraduate -->
+
+            <!-- start graduate -->
+             <div class="card-body">
+              <h5>2) Graduate : </h5>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label>Name of Degree:</label>
+                    {{ form.name_of_degree }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Admission Session: </label>
+                    {{ form.admission_session }}
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Reg/ID No.: </label>
+                    {{ form.reg_id_no }}
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Batch:</label>
+                    {{ form.batch }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Year of Passing: </label>
+                    {{ form.year_of_passing }}
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>Graduating Session: </label>
+                    {{ form.graduating_session }}
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label>CGPA: </label>
+                    {{ form.cgpa }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- end graduate -->
+
+            <div class="container mb-3">
+              <div class="row justify-content-center">
+                {% if form.instance.is_submitted %}
+                  <p>Form submitted, cannot be changed.</p>
+                {% else %}
+                  <div class="col-auto">
+                    <button type="submit" name="action" value="draft" class="btn btn-primary mr-2">Draft</button>
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" name="action" value="confirm" class="btn btn-success">Submit</button>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </form>
+
+
+
+            <!-- general form elements disabled -->
+            <!-- <div class="card card-warning"> -->
+              <!-- <div class="card-header">
+                <h3 class="card-title">General Elements</h3>
+              </div> -->
+
+             
+            <!-- /.card -->
+            <!-- general form elements disabled -->
+            <!-- <div class="card card-secondary">
+              <div class="card-header">
+                <h3 class="card-title">Custom Elements</h3>
+              </div> -->
+              <!-- /.card-header -->
+              
+                
+          
+         
+
+          <!--/.col (right) -->
+      
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+
+<!-- <div class="container">
+  <div class="row">
+    <button type="submit" class="btn btn-primary">Primary</button>
+  <button type="submit" class="btn btn-success">Success</button>
+  </div>
+</div> -->
+
+<!-- <div class="container mb-3">
+  <div class="row justify-content-center">
+    {% if form.instance.is_submitted %}
+      <p>Form submitted, cannot be changed.</p>
+    {% else %}
+      <div class="col-auto">
+        <button type="submit" name="action" value="draft" class="btn btn-primary mr-2">Draft</button>
+      </div>
+      <div class="col-auto">
+        <button type="submit" name="action" value="confirm" class="btn btn-success">Submit</button>
+      </div>
+    {% endif %}
+  </div>
+</div> -->
+
+  <!-- </form> -->
+  <!-- /.content -->
+
+<!-- /.content-wrapper -->
+
+
+
+{% endblock content %}
+
+<!-- Control Sidebar -->
+<!-- <aside class="control-sidebar control-sidebar-dark"> -->
+  <!-- Control sidebar content goes here -->
+<!-- </aside> -->
+<!-- /.control-sidebar -->
+<!-- </div> -->
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    bsCustomFileInput.init();
+  });
+</script>
+</body>
+
+</html>
